@@ -9,7 +9,11 @@ If an empty string is provided, the function should immediately print "Nothing t
 */
 
 function delayedPrinter(str, delay) {
-    // Your code here
+  if (str.length === 0) {
+    return "Nothing to print";
+  } else {
+    setTimeout((str) => console.log(str), delay);
+  }
 }
 
 module.exports = delayedPrinter;
